@@ -3,7 +3,6 @@ import {FlatList, StyleSheet, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
 import {BASE_URL} from '../../utilities/constants';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {Loader} from '../components/Loader';
 import {CardItem} from '../components/CardItem';
 
