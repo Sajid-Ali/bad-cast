@@ -29,11 +29,6 @@ export const CardItem = ({item, index, navigation}) => {
 };
 
 const styles = StyleSheet.create({
-  f1: {flex: 1},
-  container: {
-    flex: 1,
-    backgroundColor: Colors.white,
-  },
   mainCardView: {
     height: 90,
     backgroundColor: Colors.white,
