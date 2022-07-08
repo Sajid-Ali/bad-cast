@@ -30,7 +30,7 @@ const App = () => {
           <Stack.Screen
             name="Detail"
             component={DetailScreen}
-            options={{title: 'Details'}}
+            options={{title: 'Detail'}}
           />
         </Stack.Navigator>
       </NavigationContainer>

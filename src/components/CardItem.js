@@ -1,12 +1,8 @@
 import React from 'react';
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
+
+import {ImageComponent} from './Image';
 
 export const CardItem = ({item, index, navigation}) => {
   return (
@@ -18,11 +14,7 @@ export const CardItem = ({item, index, navigation}) => {
       <View style={styles.mainCardView}>
         <View style={styles.wrapper}>
           <View style={styles.subCardView}>
-            <Image
-              source={{uri: item.img}}
-              resizeMode="cover"
-              style={styles.image}
-            />
+            <ImageComponent imageUrl={item.img} customStyle={styles.image} />
           </View>
           <View style={styles.ml12}>
             <Text style={styles.name}>{item.name || ''}</Text>

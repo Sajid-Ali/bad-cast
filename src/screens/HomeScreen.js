@@ -1,10 +1,10 @@
 import axios from 'axios';
-import {FlatList, StyleSheet, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
+import {FlatList, StyleSheet, View} from 'react-native';
 
-import {BASE_URL} from '../../utilities/constants';
 import {Loader} from '../components/Loader';
 import {CardItem} from '../components/CardItem';
+import {BASE_URL} from '../../utilities/constants';
 
 export const HomeScreen = ({navigation}) => {
   const [list, setList] = useState([]);
@@ -16,7 +16,7 @@ export const HomeScreen = ({navigation}) => {
     try {
       setLoading(true);
       const response = await axios.get(BASE_URL);
-      setList(response.data);
+      setList(response?.data || []);
       setLoading(false);
     } catch (error) {
       console.log(error);
